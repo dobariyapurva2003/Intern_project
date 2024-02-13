@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.readMoreClassName{
+    color: blue;
+}
+.readLessClassName{
+    color: blue;
+}
+.background_home
+{
+    background-image: url("./6057300.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.background_first
+{
+    background-image: url("./6057300.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+input[type="checkbox"]{
+    width: 25px; /*Desired width*/
+    height: 25px; /*Desired height*/
+  }
