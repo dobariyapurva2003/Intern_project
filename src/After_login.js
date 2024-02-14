@@ -245,7 +245,7 @@ const After_login = (props) => {
 
                     {/* {!Default && ( */}
 
-                    <div className="grid grid-cols-2 mt-10">
+                    <div className="grid grid-cols-3 mt-10">
 
                         {Object.keys(Users).length > 0 ?
                             Users.articles.map((curelem, index) => {
@@ -253,8 +253,11 @@ const After_login = (props) => {
 
 
                                     <div key={index} className="border-2 border-black m-5
-                                                                        rounded-lg shadow-md shadow-black">
+                                                                 rounded-lg shadow-md shadow-black">
                                         <div className="m-3">
+                                            <div>
+                                                <img src={curelem.urlToImage} alt="Not available"></img>
+                                            </div>
                                             <div className="bg-slate-200 w-full flex justify-between p-3 rounded-md text-xl font-bold">
                                                 <div>
                                                     <a href={curelem.url} className="hover:border-b-2 
