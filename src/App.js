@@ -20,8 +20,9 @@ import View from "./View";
 import Edit from "./Edit";
 import Folder from "./Folder";
 import Disp_feed from "./Disp_feed";
-import Branch from "./Branch";
+// import Branch from "./Branch";
 import Email from "./Email";
+import Usr_acnt from "./Usr_acnt";
 
 const App = () => {
 
@@ -51,7 +52,8 @@ const App = () => {
           </>}>
           <Route path="/After_login_admin" element={<Navbar_admin admin_user={admin_user} />} />
           <Route path="/displayFeedback" element={<Disp_feed admin_user={admin_user} />} />
-          <Route path="/set_topic" element={<Branch admin_user={admin_user} />} />
+          <Route path="/usr_acnt" element={<Usr_acnt admin_user={admin_user} />} />
+          {/* <Route path="/set_topic" element={<Branch admin_user={admin_user} />} /> */}
         </Route>
 
         <Route path="/" element={<Home />} />

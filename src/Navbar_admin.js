@@ -71,7 +71,8 @@ const Navbar_admin = (props) => {
 
                                     <div class="dropdown-content">
                                         <a href="/displayFeedback">FeedBacks</a>
-                                        <a href="/set_topic">Set topics</a>
+                                        {/* <a href="/set_topic">Set topics</a> */}
+                                        <a href="/usr_acnt">User accounts</a>
                                         <a>
                                             <button onClick={() => { logout() }}>Logout</button></a>
                                     </div>

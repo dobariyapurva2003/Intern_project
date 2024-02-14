@@ -291,6 +291,30 @@ router.patch("/rmfeed", async (req, res) => {
   }
 });
 
+
+
+router.patch("/rm_usr_acnt", async (req, res) => {
+  try {
+    const username = req.body.feedBack;
+    const findUser = await User.findOneAndDelete(
+      {
+        username : username
+      }
+    )
+    if (findUser) {
+      res.status(200).json({ message: "Removed from User accounts" });
+    } else {
+      res.status(422).json({ message: "Failed" });
+    }
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+
+
+
+
 router.patch("/removeArt", async (req, res) => {
   try {
     const { email, topic, title, language, description, content, url, image, publishedAt }
@@ -528,6 +552,34 @@ router.post("/disp_feed", async (req, res) => {
     console.log(err);
   }
 });
+
+
+
+
+router.post("/disp_usr_acnt", async (req, res) => {
+  const username = req.body.username;
+  console.log(username);
+  try {
+    const userFind = await Admin.findOne({ username: username });
+    if (userFind) {
+      const disp = await User.find({});
+      let data = [];
+      for (let i = 0; i < disp.length; i++) {
+        data.push(disp[i]);
+      }
+      res.status(200).send(data);
+    } else {
+      res.status(422).send("user not found");
+    }
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+
+
+
+
 
 router.post("/saveArticle", async (req, res) => {
   try {
