@@ -3,9 +3,9 @@ import React from "react";
 const Home = () => {
     return (
         <>
-            <div className="">
+            <div className="bg-slate-100">
                 <div className="flex flex-row">
-                <div className=" w-1/2 h-screen flex justify-center items-center">
+                    <div className=" w-1/2 h-screen flex justify-center items-center">
                         <img className="h-3/4 mr-16 rounded-3xl shadow-xl shadow-black"
                             src="../bg1.jpg" alt="loading"></img>
                     </div>
@@ -19,14 +19,13 @@ const Home = () => {
                                 </div>
                                 <div className="flex justify-center text-center text-lg
                                 font-semibold mx-8">
-                                    <h1>You can choose any language mentioned in
-                                        References and topics/category for getting news
-                                        articles in wanted language. It will show you head
-                                        title and small part of description plus publishing
-                                        date and it also provides reference link related to
-                                        article, if you want to know in more details you can
-                                        go at website through that link y clicking on "Read more"
-                                        button.</h1>
+                                    <h1>You can choose any topic for getting
+                                        articles without signup/login.For more details
+                                        about articles click on "Read more" button. Users who are
+                                        supposed to signup/login can like, save articles and
+                                        they also can give feedbacks regading articles.
+                                        Users can edit/view their profiles after signup/login.
+                                    </h1>
                                 </div>
                                 <div className="flex justify-center text-xl font-semibold">
                                     <button className="px-3 bg-slate-300 hover:bg-white
@@ -39,7 +38,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
 
                 {/* For next content */}
@@ -47,7 +46,7 @@ const Home = () => {
 
 
 
-                <div className="flex flex-row">
+                {/* <div className="flex flex-row">
                     
                     <div className=" w-1/2 h-screen flex justify-center items-center">
                         <div className="w-3/4 h-2/3 
@@ -73,13 +72,13 @@ const Home = () => {
                         <img className="h-3/4 rounded-full "
                             src="../wishlist.jpg" alt="loading"></img>
                     </div>
-                </div>
+                </div> */}
 
 
                 {/* For next content */}
 
 
-                <div className="flex flex-row">
+                {/* <div className="flex flex-row">
                 <div className=" w-1/2 h-screen flex justify-center items-center">
                         <img className="h-3/4 rounded-full"
                             src="../view_profile.jpg" alt="loading"></img>
@@ -103,14 +102,14 @@ const Home = () => {
                         </div>
                     </div>
                     
-                </div>
+                </div> */}
 
 
 
 
 
 
-                <div className="flex flex-row">
+                {/* <div className="flex flex-row">
                     
                     <div className=" w-1/2 h-screen flex justify-center items-center">
                         <div className="w-3/4 h-2/3 
@@ -136,12 +135,12 @@ const Home = () => {
                         <img className="h-2/3 mr-20 rounded-xl shadow-md shadow-black"
                             src="../folder2.jpg" alt="loading"></img>
                     </div>
-                </div>
+                </div> */}
 
 
 
 
-                <div className="flex flex-row">
+                {/* <div className="flex flex-row">
                 <div className=" w-1/2 mr-16 h-screen flex justify-center items-center">
                         <img className="h-2/3 w-2/3 rounded-xl shadow-md shadow-black"
                             src="../feedback.jpg" alt="loading"></img>
@@ -164,7 +163,8 @@ const Home = () => {
                         </div>
                     </div>
                     
-                </div>
+                </div> */}
+
             </div>
         </>
     )

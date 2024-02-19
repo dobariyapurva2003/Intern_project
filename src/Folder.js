@@ -66,7 +66,14 @@ const Folder = (props) => {
                                         </div>
                                     </div>
                                 );
-                            }) : <><div>waiting...</div></>
+                            }) : <>
+                            <div className="h-screen flex w-full">
+                                <div className=" w-full flex justify-center">
+                                    <div className="grid grid-col-1 content-center text-5xl font-bold">
+                                        No Article Saved Yet
+                                    </div>
+                                </div>
+                            </div></>
                         }
                     </div>
                 </div>

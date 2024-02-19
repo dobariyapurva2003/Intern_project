@@ -30,13 +30,13 @@ const After_login = (props) => {
         topic = props.topic;
 
         if (props.topic === "default" || props.topic === "") {
-            const response1 = await fetch(`https://newsapi.org/v2/everything?q=${props.u_branch}&sortBy=relevancy&language=${props.lang}&apiKey=a466305c62384973907af3f9184c4e75`);
+            const response1 = await fetch(`https://newsapi.org/v2/everything?q=${props.u_branch}&sortBy=relevancy&language=en&apiKey=a466305c62384973907af3f9184c4e75`);
             const data1 = await response1.json();
             setUser(data1);
             console.log(data1);
         }
         else {
-            const response1 = await fetch(`https://newsapi.org/v2/everything?q=${props.topic}&sortBy=relevancy&language=${props.lang}&apiKey=a466305c62384973907af3f9184c4e75`);
+            const response1 = await fetch(`https://newsapi.org/v2/everything?q=${props.topic}&sortBy=relevancy&language=en&apiKey=a466305c62384973907af3f9184c4e75`);
             const data1 = await response1.json();
             setUser(data1);
             console.log(data1);

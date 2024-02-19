@@ -6,7 +6,7 @@ const Landing_page = (props) => {
     const [users, setUsers] = useState([]);
 
     const fetchData = async () => {
-        const response1 = await fetch(`https://newsapi.org/v2/everything?q=${props.topic}&sortBy=relevancy&language=${props.lang}&apiKey=a466305c62384973907af3f9184c4e75`);
+        const response1 = await fetch(`https://newsapi.org/v2/everything?q=${props.topic}&sortBy=relevancy&language=en&apiKey=a466305c62384973907af3f9184c4e75`);
         const data1 = await response1.json();
         setUsers(data1);
         console.log(data1);
