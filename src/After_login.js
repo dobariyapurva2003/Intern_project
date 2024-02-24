@@ -74,6 +74,11 @@ const After_login = (props) => {
         const email = props.user.email;
         var title = Users.articles[index].title;
         var topic = props.topic;
+        
+        if(topic === "default" || topic === "")
+        {
+            topic = props.u_branch;
+        }
 
         // if (props.topic === "default") {
         //     topic = props.total_topics[index];
@@ -256,7 +261,7 @@ const After_login = (props) => {
                                                                  rounded-lg shadow-md shadow-black">
                                         <div className="m-3">
                                             <div>
-                                                <img src={curelem.urlToImage} alt="Not available"></img>
+                                                <img src={curelem.urlToImage} onerror="this.onerror=null; this.src='../alternate.png';" alt=""></img>
                                             </div>
                                             <div className="bg-slate-200 w-full flex justify-between p-3 rounded-md text-xl font-bold">
                                                 <div>
@@ -337,7 +342,7 @@ const After_login = (props) => {
                 {feed && (
                     <div className="feedback_form">
                         <form>
-                            <div className="w-72 h-52 bg-red-200 flex flex-col 
+                            <div className="w-72 h-52 bg-slate-200 flex flex-col 
                             rounded-lg shadow-xl shadow-black">
                                 <div className="my-3 mr-3 flex self-end place-items-center">
                                     <button onClick={() => { setfeed(!feed) }}>
@@ -351,7 +356,7 @@ const After_login = (props) => {
                                         placeholder="Enter your feedback.."></textarea>
                                 </div>
                                 <div className="h-1/4 w-1/3 rounded-xl my-3 mr-3 
-                                bg-yellow-100 flex self-end place-items-center">
+                                bg-white flex self-end place-items-center">
                                     <button onClick={() => { storeFeedback() }} className="w-full h-full" value="submit">
                                         Submit</button>
                                 </div>
