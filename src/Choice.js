@@ -21,8 +21,12 @@ const Choice = () => {
                                              rounded-lg hover:bg-slate-100 h-full shadow-md shadow-black bg-white w-1/3" href="/first">User</a>
                                     </div>
                                     <div className="flex justify-center place-items-center h-12 flex-col my-16">
-                                        <a className="text-xl flex place-content-around py-2
-                                             rounded-lg hover:bg-slate-100 shadow-md shadow-black h-full bg-white w-1/3" href="/admin">Admin</a>
+                                        {/* <a className="text-xl flex place-content-around py-2
+                                             rounded-lg hover:bg-slate-100 shadow-md shadow-black
+                                              h-full bg-white w-1/3" href="/admin">Admin</a> */}
+                                              <a className="text-xl flex place-content-around py-2
+                                             rounded-lg hover:bg-slate-100 shadow-md shadow-black
+                                              h-full bg-white w-1/3" href="">Admin</a>
                                     </div>
                                     {/* <div className="text-md mt-16 flex justify-center">
                                         <button className=" bg-yellow-100 rounded-md 

@@ -64,27 +64,25 @@ const Display_Fav = (props) => {
 
     const getMore = async (index) => {
         //window.alert(disp[index].topic);
-        const topic = disp[index].topic;
-        const lan = disp[index].language;
+        let topic = disp[index].topic;
         const wanted_title = disp[index].title;
         console.log(topic);
-        console.log(lan);
         console.log(wanted_title);
-        const response1 = await fetch(`https://newsapi.org/v2/everything?q=${topic}&sortBy=relevancy&language=${lan}&apiKey=a466305c62384973907af3f9184c4e75`);
+        const response1 = await fetch(`https://newsapi.org/v2/everything?q=${topic}&sortBy=relevancy&language=en&apiKey=a466305c62384973907af3f9184c4e75`);
         const data1 = await response1.json();
         setshow(data1);
         console.log(show);
-        
-        data1.articles.forEach((elem) => {
-            if (wanted_title === elem.title) {
-                console.log(elem);
-                setresult(elem);
-                console.log(result);
-                window.alert("founded");
-                set_less_show(false);
-            }
-        })
-
+        if (data1) {
+            data1.articles.forEach((elem) => {
+                if (wanted_title === elem.title) {
+                    console.log(elem);
+                    setresult(elem);
+                    console.log(result);
+                    window.alert("founded");
+                    set_less_show(false);
+                }
+            })
+        }
         console.log("finished");
 
 

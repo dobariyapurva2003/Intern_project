@@ -2,6 +2,7 @@ import React from "react";
 import Navbar_normal from "./Navbar_normal";
 import { useState, useEffect } from "react";
 
+
 const Landing_page = (props) => {
     const [users, setUsers] = useState([]);
 
@@ -25,7 +26,8 @@ const Landing_page = (props) => {
                                      rounded-lg shadow-sm shadow-black bg-slate-100">
                                 <div className="">
                                     <div className="">
-                                        <img src={curelem.urlToImage} alt="Not available"></img>
+                                        <img src={curelem.urlToImage} onerror="this.onerror=null; this.src='../alternate.png';" alt=""></img>
+
                                     </div>
                                     <div className="p-3 rounded-md text-xl font-bold">
                                         <a href={curelem.url} className="hover:border-b-2 
