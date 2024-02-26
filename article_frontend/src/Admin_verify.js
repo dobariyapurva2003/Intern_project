@@ -7,7 +7,7 @@ const Admin_verify =() => {
     const [user_password, set_user_password] = useState('');
     const loginUser = async (ev) => {
         ev.preventDefault();
-        const respon = await fetch('/loginForAdmin', {
+        const respon = await fetch('https://intern-project-qdst.onrender.com/loginForAdmin', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -10,7 +10,7 @@ const Disp_save = (props) => {
         console.log(email);
         console.log(topic);
         try {
-            const res = await fetch("/disp_save", {
+            const res = await fetch("https://intern-project-qdst.onrender.com/disp_save", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -45,7 +45,7 @@ const Disp_save = (props) => {
         const publishedAt = disp[index].publishedAt;
         console.log(title);
         console.log(publishedAt);
-        const res = await fetch("/removeArt", {
+        const res = await fetch("https://intern-project-qdst.onrender.com/removeArt", {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"

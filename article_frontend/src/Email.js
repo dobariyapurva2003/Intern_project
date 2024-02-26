@@ -9,7 +9,7 @@ const Email = () => {
 
   const fetchUser = async () => {
     try {
-      const res = await fetch("/user", {
+      const res = await fetch("https://intern-project-qdst.onrender.com/user", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -34,7 +34,7 @@ const Email = () => {
 
   const postPass = async () => {
     try{
-        const res = await fetch("fpassword", {
+        const res = await fetch("https://intern-project-qdst.onrender.com/fpassword", {
             method:"PATCH",
             headers:{
                 "Content-Type":"application/json"
