@@ -13,7 +13,7 @@ const Display_Fav = (props) => {
         const email = props.user.email;
         console.log(email);
         try {
-            const res = await fetch("https://intern-project-qdst.onrender.com/disp_fev", {
+            const res = await fetch("/disp_fev", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -41,7 +41,7 @@ const Display_Fav = (props) => {
         const topic = disp[index].topic;
         const language = disp[index].language;
         console.log(title);
-        const res = await fetch("https://intern-project-qdst.onrender.com/favourites", {
+        const res = await fetch("/favourites", {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"

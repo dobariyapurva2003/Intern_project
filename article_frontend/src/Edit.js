@@ -19,7 +19,7 @@ const Edit = (props) => {
         const oldemail = props.user.email;
         const { fullname, email, username, branch } = userdata;
         try {
-            const res = await fetch("https://intern-project-qdst.onrender.com/updateUser", {
+            const res = await fetch("/updateUser", {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",

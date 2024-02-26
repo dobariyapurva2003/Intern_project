@@ -24,7 +24,7 @@ const Navbar_admin = (props) => {
 
     const logout = async () => {
         try {
-            const res = await fetch("https://intern-project-qdst.onrender.com/Logout", {
+            const res = await fetch("/Logout", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

@@ -7,7 +7,7 @@ const Valid = (props) => {
     const [user, setuser] = useState({});
     const open_about = async () => {
         try {
-            const response = await fetch('https://intern-project-qdst.onrender.com/About', {
+            const response = await fetch('/About', {
                 method: "GET",
                 headers: {
                     Accept: "application/json",

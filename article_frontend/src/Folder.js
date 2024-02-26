@@ -23,7 +23,7 @@ const Folder = (props) => {
         const email = props.user.email;
         console.log(email);
         try {
-            const res = await fetch("https://intern-project-qdst.onrender.com/get_save_topics", {
+            const res = await fetch("/get_save_topics", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

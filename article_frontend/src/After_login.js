@@ -92,7 +92,7 @@ const After_login = (props) => {
         const language = props.lang;
         console.log(title);
         console.log(language);
-        const res = await fetch("https://intern-project-qdst.onrender.com/favourites", {
+        const res = await fetch("/favourites", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -149,7 +149,7 @@ const After_login = (props) => {
         // }
 
         console.log(title);
-        const res = await fetch("https://intern-project-qdst.onrender.com/saveArticle", {
+        const res = await fetch("/saveArticle", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -173,7 +173,7 @@ const After_login = (props) => {
     const storeFeedback = async () => {
         const email = props.user.email;
         const { feedBack } = saveFeed;
-        const response = await fetch("https://intern-project-qdst.onrender.com/storeFeed", {
+        const response = await fetch("/storeFeed", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

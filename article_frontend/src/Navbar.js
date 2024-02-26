@@ -33,7 +33,7 @@ const Navbar = (props) => {
         const branch = props.user.branch;
         console.log(branch);
         try {
-            const res = await fetch("https://intern-project-qdst.onrender.com/disp_topics", {
+            const res = await fetch("/disp_topics", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -62,7 +62,7 @@ const Navbar = (props) => {
 
     const logout = async () => {
         try {
-            const res = await fetch("https://intern-project-qdst.onrender.com/Logout", {
+            const res = await fetch("/Logout", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

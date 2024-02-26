@@ -25,7 +25,7 @@ const First = (props) => {
     const postdata = async (ev) => {
         ev.preventDefault();
         const { fullname, email, username, user_password, branch } = user;
-        const response = await fetch("https://intern-project-qdst.onrender.com/signup", {
+        const response = await fetch("/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -52,7 +52,7 @@ const First = (props) => {
     const [user_password, set_user_password] = useState('');
     const loginUser = async (ev) => {
         ev.preventDefault();
-        const respon = await fetch('https://intern-project-qdst.onrender.com/login', {
+        const respon = await fetch('/login', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
