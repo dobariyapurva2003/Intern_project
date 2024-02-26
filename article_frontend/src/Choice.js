@@ -14,19 +14,21 @@ const Choice = () => {
                     </div>
                     <div className=" w-1/2 h-screen flex justify-center items-center">
                         <div className="w-2/3 h-2/3 bg-slate-200 rounded-md flex justify-center">
+                            
                             <div className="flex flex-col justify-evenly w-full">
+                            <div className="text-2xl font-bold flex justify-center place-items-center h-12 flex-col">
+                                Roll Selection
+                            </div>
                                 <form>
                                     <div className="flex justify-center place-items-center h-12 flex-col my-16">
                                         <a className="text-xl flex place-content-around py-2
                                              rounded-lg hover:bg-slate-100 h-full shadow-md shadow-black bg-white w-1/3" href="/first">User</a>
                                     </div>
                                     <div className="flex justify-center place-items-center h-12 flex-col my-16">
-                                        {/* <a className="text-xl flex place-content-around py-2
+                                        <a className="text-xl flex place-content-around py-2
                                              rounded-lg hover:bg-slate-100 shadow-md shadow-black
-                                              h-full bg-white w-1/3" href="/admin">Admin</a> */}
-                                              <a className="text-xl flex place-content-around py-2
-                                             rounded-lg hover:bg-slate-100 shadow-md shadow-black
-                                              h-full bg-white w-1/3" href="">Admin</a>
+                                              h-full bg-white w-1/3" href="/admin">Admin</a>
+
                                     </div>
                                     {/* <div className="text-md mt-16 flex justify-center">
                                         <button className=" bg-yellow-100 rounded-md 
