@@ -114,7 +114,7 @@ const Navbar = (props) => {
                                         <a href="/view_profile">View Profile</a>
                                         <a href="/edit_profile">Edit Profile</a>
                                         <a href="/display">Wishlist</a>
-                                        <a href="/folder">Folders</a>
+                                        <a href="/folder">Saved Articles</a>
                                         <a><button onClick={() => { logout() }}>Logout</button></a>
                                     </div>
                                 </li>

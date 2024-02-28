@@ -55,7 +55,7 @@ const Navbar_component = (props) => {
                                     <a href="/edit_profile">Edit Profile</a>
                                     <a href="/After_login">Home</a>
                                     <a href="/display">Wishlist</a>
-                                    <a href="/folder">Folders</a>
+                                    <a href="/folder">Saved Articles</a>
                                     {/* <a href="/time">Time spent</a> */}
                                     <a><button onClick={() => { logout() }}>Logout</button></a>
                                 </div>
