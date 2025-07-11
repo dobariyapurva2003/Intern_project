@@ -1,10 +1,11 @@
 import React from "react";
+const address = process.env.REACT_APP_BACKEND_URL;
 
 const Navbar_component = (props) => {
 
     const logout = async () => {
         try {
-            const res = await fetch("/Logout", {
+            const res = await fetch(`${address}/Logout`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

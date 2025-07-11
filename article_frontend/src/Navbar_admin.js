@@ -5,6 +5,7 @@ import { ImEnter, ImSearch } from "react-icons/im";
 import { FcHome, FcAbout, FcTodoList, FcBusinessman, FcEditImage, FcUndo } from "react-icons/fc";
 import After_login from "./After_login";
 import Landing_page from "./Landing_page";
+const address = process.env.REACT_APP_BACKEND_URL;
 const Navbar_admin = (props) => {
 
     const [topic, setTopic] = useState("food");
@@ -24,7 +25,7 @@ const Navbar_admin = (props) => {
 
     const logout = async () => {
         try {
-            const res = await fetch("/Logout", {
+            const res = await fetch(`${address}/Logout`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

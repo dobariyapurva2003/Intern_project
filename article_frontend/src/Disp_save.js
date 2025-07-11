@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+const address = process.env.REACT_APP_BACKEND_URL;
 
 const Disp_save = (props) => {
 
@@ -10,7 +11,7 @@ const Disp_save = (props) => {
         console.log(email);
         console.log(topic);
         try {
-            const res = await fetch("/disp_save", {
+            const res = await fetch(`${address}/disp_save`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -45,7 +46,7 @@ const Disp_save = (props) => {
         const publishedAt = disp[index].publishedAt;
         console.log(title);
         console.log(publishedAt);
-        const res = await fetch("/removeArt", {
+        const res = await fetch(`${address}/removeArt`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"

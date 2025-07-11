@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+const address = process.env.REACT_APP_BACKEND_URL;
 
 const Disp_feed = (props) => {
 
@@ -9,7 +10,7 @@ const Disp_feed = (props) => {
         //const username = "admin1";
         console.log(username);
         try {
-            const res = await fetch("/disp_feed", {
+            const res = await fetch(`${address}/disp_feed`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -34,7 +35,7 @@ const Disp_feed = (props) => {
     const remove = async (index) => {
         const feedBack = disp[index];
         console.log(feedBack);
-        const res = await fetch("/rmfeed", {
+        const res = await fetch(`${address}/rmfeed`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"

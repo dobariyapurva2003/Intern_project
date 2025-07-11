@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+const address = process.env.REACT_APP_BACKEND_URL;
 
 const Email = () => {
 
@@ -9,7 +10,7 @@ const Email = () => {
 
   const fetchUser = async () => {
     try {
-      const res = await fetch("/user", {
+      const res = await fetch(`${address}/user`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -34,7 +35,7 @@ const Email = () => {
 
   const postPass = async () => {
     try{
-        const res = await fetch("/fpassword", {
+        const res = await fetch(`${address}/fpassword`, {
             method:"PATCH",
             headers:{
                 "Content-Type":"application/json"

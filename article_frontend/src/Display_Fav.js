@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Navbar_component from "./Navbar_component";
+const address = process.env.REACT_APP_BACKEND_URL;
 
 const Display_Fav = (props) => {
 
@@ -13,7 +14,7 @@ const Display_Fav = (props) => {
         const email = props.user.email;
         console.log(email);
         try {
-            const res = await fetch("/disp_fev", {
+            const res = await fetch(`${address}/disp_fev`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -41,7 +42,7 @@ const Display_Fav = (props) => {
         const topic = disp[index].topic;
         const language = disp[index].language;
         console.log(title);
-        const res = await fetch("/favourites", {
+        const res = await fetch(`${address}/favourites`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"

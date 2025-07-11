@@ -3,6 +3,7 @@ import Navbar_component from "./Navbar_component";
 import { ImFolder } from "react-icons/im";
 import { Navigate } from "react-router-dom";
 import Disp_save from "./Disp_save";
+const address = process.env.REACT_APP_BACKEND_URL;
 
 
 const Folder = (props) => {
@@ -23,7 +24,7 @@ const Folder = (props) => {
         const email = props.user.email;
         console.log(email);
         try {
-            const res = await fetch("/get_save_topics", {
+            const res = await fetch(`${address}/get_save_topics`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

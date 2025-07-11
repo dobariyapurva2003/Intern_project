@@ -6,6 +6,7 @@ import Navbar from "./Navbar";
 import { FcSearch } from "react-icons/fc";
 import { MdFeedback, MdClose, MdDataSaverOn } from "react-icons/md";
 import { AiFillLike } from "react-icons/ai";
+const address = process.env.REACT_APP_BACKEND_URL;
 const After_login = (props) => {
 
     const [users, setUsers] = useState([]);
@@ -92,7 +93,7 @@ const After_login = (props) => {
         const language = props.lang;
         console.log(title);
         console.log(language);
-        const res = await fetch("/favourites", {
+        const res = await fetch(`${address}/favourites`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -149,7 +150,7 @@ const After_login = (props) => {
         // }
 
         console.log(title);
-        const res = await fetch("/saveArticle", {
+        const res = await fetch(`${address}/saveArticle`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -173,7 +174,7 @@ const After_login = (props) => {
     const storeFeedback = async () => {
         const email = props.user.email;
         const { feedBack } = saveFeed;
-        const response = await fetch("/storeFeed", {
+        const response = await fetch(`${address}/storeFeed`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

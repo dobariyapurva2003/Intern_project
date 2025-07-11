@@ -2,6 +2,7 @@ import React from "react";
 import Navbar_component from "./Navbar_component";
 import { useState } from "react";
 import { useEffect, useAlert } from "react";
+const address = process.env.REACT_APP_BACKEND_URL;
 const Edit = (props) => {
 
     const user = props.user;
@@ -19,7 +20,7 @@ const Edit = (props) => {
         const oldemail = props.user.email;
         const { fullname, email, username, branch } = userdata;
         try {
-            const res = await fetch("/updateUser", {
+            const res = await fetch(`${address}/updateUser`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",

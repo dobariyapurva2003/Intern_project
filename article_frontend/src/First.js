@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+const address = process.env.REACT_APP_BACKEND_URL;
 
 const First = (props) => {
 
@@ -25,7 +26,8 @@ const First = (props) => {
     const postdata = async (ev) => {
         ev.preventDefault();
         const { fullname, email, username, user_password, branch } = user;
-        const response = await fetch("/signup", {
+        console.log(address);
+        const response = await fetch(`${address}/signup`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -52,7 +54,7 @@ const First = (props) => {
     const [user_password, set_user_password] = useState('');
     const loginUser = async (ev) => {
         ev.preventDefault();
-        const respon = await fetch('/login', {
+        const respon = await fetch(`${address}/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -1,5 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
+const address = process.env.REACT_APP_BACKEND_URL;
+
 const Usr_acnt = (props) => {
 
 
@@ -9,7 +11,7 @@ const Usr_acnt = (props) => {
         //const username = "admin1";
         console.log(username);
         try {
-            const res = await fetch("/disp_usr_acnt", {
+            const res = await fetch(`${address}/disp_usr_acnt`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -35,7 +37,7 @@ const Usr_acnt = (props) => {
     const remove = async (index) => {
         const feedBack = disp[index].username;
         console.log(feedBack);
-        const res = await fetch("/rm_usr_acnt", {
+        const res = await fetch(`${address}/rm_usr_acnt`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"

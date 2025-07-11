@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+const address = process.env.REACT_APP_BACKEND_URL;
 const Branch = (props) => {
 
 
@@ -23,7 +24,7 @@ const Branch = (props) => {
             window.alert("This topic is not available. Try another one..");
         }
         else {
-            const response = await fetch("/postTopic", {
+            const response = await fetch(`${address}/postTopic`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -49,7 +50,7 @@ const Branch = (props) => {
         const branchSent = branch;
         const topic = dispTopics[index];
         console.log(topic);
-        const res = await fetch("/removeTopic", {
+        const res = await fetch(`${address}/removeTopic`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
@@ -73,7 +74,7 @@ const Branch = (props) => {
         const branchSent = branch;
         const topic = dispTopics[index];
         console.log(topic);
-        const res = await fetch("/removeTopicForUsers", {
+        const res = await fetch(`${address}/removeTopicForUsers`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
@@ -98,7 +99,7 @@ const Branch = (props) => {
         const topic = dispTopics[index];
         console.log(topic);
         try {
-            const res = await fetch("/set_topics", {
+            const res = await fetch(`${address}/set_topics`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -122,7 +123,7 @@ const Branch = (props) => {
 
     const showData = async (eve) => {
         const branchSent = eve;
-        const response = await fetch("/showTopic", {
+        const response = await fetch(`${address}/showTopic`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -145,7 +146,7 @@ const Branch = (props) => {
 
     const DispTopics = async () => {
         const branchSent = branch;
-        const response = await fetch("/showTopicForUsers", {
+        const response = await fetch(`${address}/showTopicForUsers`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

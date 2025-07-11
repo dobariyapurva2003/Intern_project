@@ -2,6 +2,7 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
+const cors = require('cors');
 const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
 dotenv.config({path: "./config.env"});
@@ -12,6 +13,7 @@ const port = 8000;
 app.use(express.json());
 app.use(cookieParser());
 app.use(require("./router/auth"));
+app.use(cors());
 
 
 app.get('/', (req, res) => {

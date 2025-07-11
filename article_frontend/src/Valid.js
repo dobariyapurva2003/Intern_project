@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+const address = process.env.REACT_APP_BACKEND_URL;
 
 const Valid = (props) => {
     
@@ -7,7 +8,7 @@ const Valid = (props) => {
     const [user, setuser] = useState({});
     const open_about = async () => {
         try {
-            const response = await fetch('/About', {
+            const response = await fetch(`${address}/About`, {
                 method: "GET",
                 headers: {
                     Accept: "application/json",

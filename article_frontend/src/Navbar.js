@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { ImEnter, ImSearch } from "react-icons/im";
 import { FcHome, FcAbout, FcTodoList, FcBusinessman, FcEditImage, FcUndo } from "react-icons/fc";
 import After_login from "./After_login";
+const address = process.env.REACT_APP_BACKEND_URL;
+
 const Navbar = (props) => {
 
     const [topic, setTopic] = useState("default");
@@ -33,7 +35,7 @@ const Navbar = (props) => {
         const branch = props.user.branch;
         console.log(branch);
         try {
-            const res = await fetch("/disp_topics", {
+            const res = await fetch(`${address}/disp_topics`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -62,7 +64,7 @@ const Navbar = (props) => {
 
     const logout = async () => {
         try {
-            const res = await fetch("/Logout", {
+            const res = await fetch(`${address}/Logout`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -95,7 +97,7 @@ const Navbar = (props) => {
 
                         <div className="w-48 ml-20">
                             <div className=" flex flex-row items-center justify-center border-2 border-solid border-black rounded-full">
-                                <div className="h-12 w-12 rounded-full overflow-hidden mx-2">
+                                <div className="h-12 rounded-full overflow-hidden mx-2">
                                     <img className="h-12" src="../user.jpg" />
                                 </div>
                                 <li className="dropdown mr-8">
